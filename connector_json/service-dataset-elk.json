@@ -1,0 +1,19 @@
+
+{
+    "name": "service-dataset-elasticsearch-sink",
+    "config": {
+      "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+      "tasks.max": "1",
+      "topics": "service_datasets",
+      "key.ignore": "true",
+      "connection.url": "http://172.29.208.1:9200",
+      "connection.username": "elastic",
+      "connection.password": "changeme",
+      "type.name": "kafka-connect",
+      "name": "service-dataset-elasticsearch-sink"
+    },
+    "tasks": [],
+    "type": null
+  }
+  
+  

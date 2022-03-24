@@ -1,0 +1,16 @@
+{
+    "name": "inventory-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "tasks.max": "1",
+        "database.hostname": "3.110.33.151",
+        "database.port": "3000",
+        "database.user": "airflow",
+        "database.password": "airflow",
+        "database.server.id": "184054",
+        "database.server.name": "dbserver2",
+        "database.whitelist": "airflow",
+        "database.history.kafka.bootstrap.servers": "broker:29092",
+        "database.history.kafka.topic": "schema-changes.inventory"
+        }
+    }

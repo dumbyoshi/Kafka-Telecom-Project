@@ -1,0 +1,537 @@
+[2022-02-09 05:24:08,629] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: generate_data.generate_data 2022-02-09T05:24:05.824917+00:00 [queued]>
+[2022-02-09 05:24:08,713] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: generate_data.generate_data 2022-02-09T05:24:05.824917+00:00 [queued]>
+[2022-02-09 05:24:08,713] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-09 05:24:08,714] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2022-02-09 05:24:08,715] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-09 05:24:08,747] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): generate_data> on 2022-02-09T05:24:05.824917+00:00
+[2022-02-09 05:24:08,756] {standard_task_runner.py:52} INFO - Started process 42 to run task
+[2022-02-09 05:24:08,772] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'generate_data', 'generate_data', '2022-02-09T05:24:05.824917+00:00', '--job-id', '187', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/geanrate_data.py', '--cfg-path', '/tmp/tmpxgf2b0co', '--error-file', '/tmp/tmpb0zxzmkw']
+[2022-02-09 05:24:08,775] {standard_task_runner.py:77} INFO - Job 187: Subtask generate_data
+[2022-02-09 05:24:08,893] {logging_mixin.py:104} INFO - Running <TaskInstance: generate_data.generate_data 2022-02-09T05:24:05.824917+00:00 [running]> on host 2e876a3ac92c
+[2022-02-09 05:24:09,002] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=generate_data
+AIRFLOW_CTX_TASK_ID=generate_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-09T05:24:05.824917+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-09T05:24:05.824917+00:00
+[2022-02-09 05:24:11,778] {logging_mixin.py:104} INFO - n= 10623
+[2022-02-09 05:24:12,628] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,627 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+[2022-02-09 05:24:12,627] {log.py:110} INFO - SELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1
+[2022-02-09 05:24:12,629] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,628 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,628] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,630] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,630 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+[2022-02-09 05:24:12,630] {log.py:110} INFO - SELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1
+[2022-02-09 05:24:12,631] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,631 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,631] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,633] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,633 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:12,633] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:12,635] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,634 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,634] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,636] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,636 INFO sqlalchemy.engine.base.Engine PRAGMA temp.table_info("call_dataset_mysql")
+[2022-02-09 05:24:12,636] {log.py:110} INFO - PRAGMA temp.table_info("call_dataset_mysql")
+[2022-02-09 05:24:12,637] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,637 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,637] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,640] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,640 INFO sqlalchemy.engine.base.Engine 
+CREATE TABLE call_dataset_mysql (
+	"index" BIGINT, 
+	"Group" BIGINT, 
+	"Call_Direction" TEXT, 
+	"Missed_Calls" BIGINT, 
+	"GroupID" TEXT, 
+	"Features" TEXT, 
+	"vpDialingfacResult" FLOAT, 
+	"UsageDeviceType" TEXT, 
+	"UserDeviceType" TEXT, 
+	date TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT, 
+	hourly_range TEXT, 
+	weekly_range TEXT
+)
+[2022-02-09 05:24:12,641] {logging_mixin.py:104} INFO - 
+[2022-02-09 05:24:12,640] {log.py:110} INFO - 
+CREATE TABLE call_dataset_mysql (
+	"index" BIGINT, 
+	"Group" BIGINT, 
+	"Call_Direction" TEXT, 
+	"Missed_Calls" BIGINT, 
+	"GroupID" TEXT, 
+	"Features" TEXT, 
+	"vpDialingfacResult" FLOAT, 
+	"UsageDeviceType" TEXT, 
+	"UserDeviceType" TEXT, 
+	date TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT, 
+	hourly_range TEXT, 
+	weekly_range TEXT
+)
+
+
+[2022-02-09 05:24:12,642] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,642 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,642] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,652] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,652 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,652] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,653] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,653 INFO sqlalchemy.engine.base.Engine CREATE INDEX ix_call_dataset_mysql_index ON call_dataset_mysql ("index")
+[2022-02-09 05:24:12,653] {log.py:110} INFO - CREATE INDEX ix_call_dataset_mysql_index ON call_dataset_mysql ("index")
+[2022-02-09 05:24:12,654] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,654 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,654] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,665] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,665 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,665] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,670] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,670 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:12,670] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:12,673] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,673 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,673] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,674] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,674 INFO sqlalchemy.engine.base.Engine (10623, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0, '16:00 - 16:59', 'Monday')
+[2022-02-09 05:24:12,674] {log.py:110} INFO - (10623, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0, '16:00 - 16:59', 'Monday')
+[2022-02-09 05:24:12,675] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,675 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,675] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,688] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,688 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:12,688] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:12,689] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,689 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,689] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,690] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,690 INFO sqlalchemy.engine.base.Engine PRAGMA temp.table_info("service_dataset_mysql")
+[2022-02-09 05:24:12,690] {log.py:110} INFO - PRAGMA temp.table_info("service_dataset_mysql")
+[2022-02-09 05:24:12,691] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,691 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,691] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,694] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,694 INFO sqlalchemy.engine.base.Engine 
+CREATE TABLE service_dataset_mysql (
+	"index" BIGINT, 
+	"GroupID" TEXT, 
+	"UserID" TEXT, 
+	"FeatureName" TEXT, 
+	"UserDeviceType" TEXT, 
+	"FeatureEventDate" TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT
+)
+[2022-02-09 05:24:12,695] {logging_mixin.py:104} INFO - 
+[2022-02-09 05:24:12,694] {log.py:110} INFO - 
+CREATE TABLE service_dataset_mysql (
+	"index" BIGINT, 
+	"GroupID" TEXT, 
+	"UserID" TEXT, 
+	"FeatureName" TEXT, 
+	"UserDeviceType" TEXT, 
+	"FeatureEventDate" TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT
+)
+
+
+[2022-02-09 05:24:12,695] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,695 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,695] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,708] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,708 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,708] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,710] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,709 INFO sqlalchemy.engine.base.Engine CREATE INDEX ix_service_dataset_mysql_index ON service_dataset_mysql ("index")
+[2022-02-09 05:24:12,709] {log.py:110} INFO - CREATE INDEX ix_service_dataset_mysql_index ON service_dataset_mysql ("index")
+[2022-02-09 05:24:12,710] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,710 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,710] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,721] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,721 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,721] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,724] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,724 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:12,724] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:12,726] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,726 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,726] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,727] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,727 INFO sqlalchemy.engine.base.Engine (10623, 'gr-0001005437', '6102637437@voip.evolveip.net', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0)
+[2022-02-09 05:24:12,727] {log.py:110} INFO - (10623, 'gr-0001005437', '6102637437@voip.evolveip.net', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0)
+[2022-02-09 05:24:12,728] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,728 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,728] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,739] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,739 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:12,739] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:12,740] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,740 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,740] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,741] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,741 INFO sqlalchemy.engine.base.Engine PRAGMA temp.table_info("device_dataset_mysql")
+[2022-02-09 05:24:12,741] {log.py:110} INFO - PRAGMA temp.table_info("device_dataset_mysql")
+[2022-02-09 05:24:12,742] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,742 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,742] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,745] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,745 INFO sqlalchemy.engine.base.Engine 
+CREATE TABLE device_dataset_mysql (
+	"index" BIGINT, 
+	"DeviceEventTypeDirection" TEXT, 
+	"GroupID" TEXT, 
+	"UserID" TEXT, 
+	"UsageDeviceType" TEXT, 
+	"UserDeviceType" TEXT, 
+	"DeviceEventDate" TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT
+)
+[2022-02-09 05:24:12,746] {logging_mixin.py:104} INFO - 
+[2022-02-09 05:24:12,745] {log.py:110} INFO - 
+CREATE TABLE device_dataset_mysql (
+	"index" BIGINT, 
+	"DeviceEventTypeDirection" TEXT, 
+	"GroupID" TEXT, 
+	"UserID" TEXT, 
+	"UsageDeviceType" TEXT, 
+	"UserDeviceType" TEXT, 
+	"DeviceEventDate" TEXT, 
+	starttime DATETIME, 
+	endtime DATETIME, 
+	duration FLOAT
+)
+
+
+[2022-02-09 05:24:12,747] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,746 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,746] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,758] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,758 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,758] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,759] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,759 INFO sqlalchemy.engine.base.Engine CREATE INDEX ix_device_dataset_mysql_index ON device_dataset_mysql ("index")
+[2022-02-09 05:24:12,759] {log.py:110} INFO - CREATE INDEX ix_device_dataset_mysql_index ON device_dataset_mysql ("index")
+[2022-02-09 05:24:12,760] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,759 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:12,759] {log.py:110} INFO - ()
+[2022-02-09 05:24:12,772] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,771 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,771] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:12,775] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,775 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:12,775] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:12,777] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,777 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,777] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:12,778] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,778 INFO sqlalchemy.engine.base.Engine (10623, 'Outgoing', 'gr-0001005437', '6102637437@voip.evolveip.net', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0)
+[2022-02-09 05:24:12,778] {log.py:110} INFO - (10623, 'Outgoing', 'gr-0001005437', '6102637437@voip.evolveip.net', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f28b92b8', '2019-06-24', '2019-06-24 16:51:39.000000', '2019-06-24 16:57:36.000000', 5.0)
+[2022-02-09 05:24:12,780] {logging_mixin.py:104} INFO - 2022-02-09 05:24:12,779 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:12,779] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:25,308] {logging_mixin.py:104} INFO - n= 14298
+[2022-02-09 05:24:25,582] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,582 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:25,582] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:25,583] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,583 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:25,583] {log.py:110} INFO - ()
+[2022-02-09 05:24:25,588] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,588 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:25,588] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:25,590] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,590 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,590] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,591] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,591 INFO sqlalchemy.engine.base.Engine (14298, 16109648000, 'Incoming', 16, 'gr-0001005437', 'Secondary Device,nan', None, 'Secondary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0, '14:00 - 14:59', 'Tuesday')
+[2022-02-09 05:24:25,591] {log.py:110} INFO - (14298, 16109648000, 'Incoming', 16, 'gr-0001005437', 'Secondary Device,nan', None, 'Secondary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0, '14:00 - 14:59', 'Tuesday')
+[2022-02-09 05:24:25,592] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,592 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:25,592] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:25,604] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,604 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:25,604] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:25,605] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,604 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:25,604] {log.py:110} INFO - ()
+[2022-02-09 05:24:25,609] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,609 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:25,609] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:25,611] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,611 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,611] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,612] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,612 INFO sqlalchemy.engine.base.Engine (14298, 'gr-0001005437', 'mnahmani@eip.local', 'Secondary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0)
+[2022-02-09 05:24:25,612] {log.py:110} INFO - (14298, 'gr-0001005437', 'mnahmani@eip.local', 'Secondary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0)
+[2022-02-09 05:24:25,613] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,613 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:25,613] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:25,646] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,646 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:25,646] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:25,648] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,647 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:25,647] {log.py:110} INFO - ()
+[2022-02-09 05:24:25,655] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,654 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:25,654] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:25,660] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,660 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,660] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:25,661] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,661 INFO sqlalchemy.engine.base.Engine (14298, 'Incoming', 'gr-0001005437', 'mnahmani@eip.local', 'Secondary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0)
+[2022-02-09 05:24:25,661] {log.py:110} INFO - (14298, 'Incoming', 'gr-0001005437', 'mnahmani@eip.local', 'Secondary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2870ef0', '2019-06-25', '2019-06-25 14:39:06.000000', '2019-06-25 14:40:21.000000', 1.0)
+[2022-02-09 05:24:25,663] {logging_mixin.py:104} INFO - 2022-02-09 05:24:25,663 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:25,663] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:38,181] {logging_mixin.py:104} INFO - n= 9208
+[2022-02-09 05:24:38,441] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,441 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:38,441] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:38,442] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,442 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:38,442] {log.py:110} INFO - ()
+[2022-02-09 05:24:38,446] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,446 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:38,446] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:38,448] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,448 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,448] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,450] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,449 INFO sqlalchemy.engine.base.Engine (9208, 16109648000, 'Incoming', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0, '13:00 - 13:59', 'Monday')
+[2022-02-09 05:24:38,449] {log.py:110} INFO - (9208, 16109648000, 'Incoming', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0, '13:00 - 13:59', 'Monday')
+[2022-02-09 05:24:38,451] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,451 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:38,451] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:38,465] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,465 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:38,465] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:38,466] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,466 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:38,466] {log.py:110} INFO - ()
+[2022-02-09 05:24:38,471] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,471 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:38,471] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:38,473] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,473 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,473] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,474] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,474 INFO sqlalchemy.engine.base.Engine (9208, 'gr-0001005437', '9724680988@voip.evolveip.net', 'nan,nan', None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0)
+[2022-02-09 05:24:38,474] {log.py:110} INFO - (9208, 'gr-0001005437', '9724680988@voip.evolveip.net', 'nan,nan', None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0)
+[2022-02-09 05:24:38,476] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,475 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:38,475] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:38,488] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,488 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:38,488] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:38,490] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,489 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:38,489] {log.py:110} INFO - ()
+[2022-02-09 05:24:38,494] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,494 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:38,494] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:38,497] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,496 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,496] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:38,498] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,497 INFO sqlalchemy.engine.base.Engine (9208, 'Incoming', 'gr-0001005437', '9724680988@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0)
+[2022-02-09 05:24:38,497] {log.py:110} INFO - (9208, 'Incoming', 'gr-0001005437', '9724680988@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 13:58:58.000000', '2019-06-24 14:02:37.000000', 3.0)
+[2022-02-09 05:24:38,499] {logging_mixin.py:104} INFO - 2022-02-09 05:24:38,499 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:38,499] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:51,078] {logging_mixin.py:104} INFO - n= 6914
+[2022-02-09 05:24:51,366] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,366 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:51,366] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:24:51,367] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,366 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:51,366] {log.py:110} INFO - ()
+[2022-02-09 05:24:51,372] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,372 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:51,372] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:51,375] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,375 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,375] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,375] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,375 INFO sqlalchemy.engine.base.Engine (6914, 16109648000, 'Incoming', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0, '17:00 - 17:59', 'Friday')
+[2022-02-09 05:24:51,375] {log.py:110} INFO - (6914, 16109648000, 'Incoming', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0, '17:00 - 17:59', 'Friday')
+[2022-02-09 05:24:51,377] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,377 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:51,377] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:51,388] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,388 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:51,388] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:24:51,390] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,389 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:51,389] {log.py:110} INFO - ()
+[2022-02-09 05:24:51,394] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,394 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:51,394] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:51,396] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,396 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,396] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,397] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,397 INFO sqlalchemy.engine.base.Engine (6914, 'gr-0001005437', 'cb-0001005437-1@voip.evolveip.net', 'nan,nan', None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0)
+[2022-02-09 05:24:51,397] {log.py:110} INFO - (6914, 'gr-0001005437', 'cb-0001005437-1@voip.evolveip.net', 'nan,nan', None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0)
+[2022-02-09 05:24:51,398] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,398 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:51,398] {log.py:110} INFO - COMMIT
+[2022-02-09 05:24:51,414] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,414 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:51,414] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:24:51,415] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,415 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:24:51,415] {log.py:110} INFO - ()
+[2022-02-09 05:24:51,420] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,419 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:24:51,419] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:24:51,422] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,422 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,422] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:24:51,423] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,423 INFO sqlalchemy.engine.base.Engine (6914, 'Incoming', 'gr-0001005437', 'cb-0001005437-1@voip.evolveip.net', None, None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0)
+[2022-02-09 05:24:51,423] {log.py:110} INFO - (6914, 'Incoming', 'gr-0001005437', 'cb-0001005437-1@voip.evolveip.net', None, None, '2019-06-21', '2019-06-21 17:58:49.000000', '2019-06-21 18:45:47.000000', 46.0)
+[2022-02-09 05:24:51,425] {logging_mixin.py:104} INFO - 2022-02-09 05:24:51,425 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:24:51,425] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:04,208] {logging_mixin.py:104} INFO - n= 8668
+[2022-02-09 05:25:04,500] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,499 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:04,499] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:04,500] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,500 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:04,500] {log.py:110} INFO - ()
+[2022-02-09 05:25:04,507] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,507 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:04,507] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:04,509] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,509 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,509] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,510] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,510 INFO sqlalchemy.engine.base.Engine (8668, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0, '11:00 - 11:59', 'Monday')
+[2022-02-09 05:25:04,510] {log.py:110} INFO - (8668, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0, '11:00 - 11:59', 'Monday')
+[2022-02-09 05:25:04,512] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,512 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:04,512] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:04,523] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,523 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:04,523] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:04,524] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,523 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:04,523] {log.py:110} INFO - ()
+[2022-02-09 05:25:04,527] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,527 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:04,527] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:04,529] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,529 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,529] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,530] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,530 INFO sqlalchemy.engine.base.Engine (8668, 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', 'nan,nan', None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0)
+[2022-02-09 05:25:04,530] {log.py:110} INFO - (8668, 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', 'nan,nan', None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0)
+[2022-02-09 05:25:04,531] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,531 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:04,531] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:04,549] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,549 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:04,549] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:04,551] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,550 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:04,550] {log.py:110} INFO - ()
+[2022-02-09 05:25:04,560] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,560 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:04,560] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:04,565] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,564 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,564] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:04,568] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,567 INFO sqlalchemy.engine.base.Engine (8668, 'Outgoing', 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0)
+[2022-02-09 05:25:04,567] {log.py:110} INFO - (8668, 'Outgoing', 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 11:38:18.000000', '2019-06-24 12:14:33.000000', 36.0)
+[2022-02-09 05:25:04,570] {logging_mixin.py:104} INFO - 2022-02-09 05:25:04,570 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:04,570] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:16,857] {logging_mixin.py:104} INFO - n= 7635
+[2022-02-09 05:25:17,357] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,357 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:17,357] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:17,358] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,358 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:17,358] {log.py:110} INFO - ()
+[2022-02-09 05:25:17,369] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,369 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:17,369] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:17,372] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,371 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,371] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,373] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,373 INFO sqlalchemy.engine.base.Engine (7635, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0, '20:00 - 20:59', 'Friday')
+[2022-02-09 05:25:17,373] {log.py:110} INFO - (7635, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'nan,nan', None, None, None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0, '20:00 - 20:59', 'Friday')
+[2022-02-09 05:25:17,374] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,374 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:17,374] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:17,389] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,389 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:17,389] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:17,391] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,391 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:17,391] {log.py:110} INFO - ()
+[2022-02-09 05:25:17,397] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,397 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:17,397] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:17,399] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,399 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,399] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,400] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,400 INFO sqlalchemy.engine.base.Engine (7635, 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', 'nan,nan', None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0)
+[2022-02-09 05:25:17,400] {log.py:110} INFO - (7635, 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', 'nan,nan', None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0)
+[2022-02-09 05:25:17,401] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,401 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:17,401] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:17,413] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,413 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:17,413] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:17,414] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,414 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:17,414] {log.py:110} INFO - ()
+[2022-02-09 05:25:17,418] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,418 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:17,418] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:17,420] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,420 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,420] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:17,420] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,420 INFO sqlalchemy.engine.base.Engine (7635, 'Outgoing', 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', None, None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0)
+[2022-02-09 05:25:17,420] {log.py:110} INFO - (7635, 'Outgoing', 'gr-0001005437', 'aa-0001005437@voip.evolveip.net', None, None, '2019-06-21', '2019-06-21 20:56:36.000000', '2019-06-21 21:18:02.000000', 21.0)
+[2022-02-09 05:25:17,421] {logging_mixin.py:104} INFO - 2022-02-09 05:25:17,421 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:17,421] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:29,973] {logging_mixin.py:104} INFO - n= 6273
+[2022-02-09 05:25:30,365] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,364 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:30,364] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:30,366] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,366 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:30,366] {log.py:110} INFO - ()
+[2022-02-09 05:25:30,371] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,371 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:30,371] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:30,373] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,373 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,373] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,374] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,374 INFO sqlalchemy.engine.base.Engine (6273, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Call Forward No Answer', None, None, None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0, '16:00 - 16:59', 'Friday')
+[2022-02-09 05:25:30,374] {log.py:110} INFO - (6273, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Call Forward No Answer', None, None, None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0, '16:00 - 16:59', 'Friday')
+[2022-02-09 05:25:30,375] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,375 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:30,375] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:30,394] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,394 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:30,394] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:30,395] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,395 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:30,395] {log.py:110} INFO - ()
+[2022-02-09 05:25:30,400] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,400 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:30,400] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:30,402] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,402 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,402] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,403] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,403 INFO sqlalchemy.engine.base.Engine (6273, 'gr-0001005437', 'lklausner@eip.local', 'Call Forward No Answer', None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0)
+[2022-02-09 05:25:30,403] {log.py:110} INFO - (6273, 'gr-0001005437', 'lklausner@eip.local', 'Call Forward No Answer', None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0)
+[2022-02-09 05:25:30,404] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,404 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:30,404] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:30,418] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,418 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:30,418] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:30,419] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,419 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:30,419] {log.py:110} INFO - ()
+[2022-02-09 05:25:30,423] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,423 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:30,423] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:30,425] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,425 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,425] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:30,426] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,426 INFO sqlalchemy.engine.base.Engine (6273, 'Outgoing', 'gr-0001005437', 'lklausner@eip.local', None, None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0)
+[2022-02-09 05:25:30,426] {log.py:110} INFO - (6273, 'Outgoing', 'gr-0001005437', 'lklausner@eip.local', None, None, '2019-06-21', '2019-06-21 16:58:23.000000', '2019-06-21 16:58:26.000000', 0.0)
+[2022-02-09 05:25:30,429] {logging_mixin.py:104} INFO - 2022-02-09 05:25:30,428 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:30,428] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:43,146] {logging_mixin.py:104} INFO - n= 422
+[2022-02-09 05:25:43,394] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,394 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:43,394] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:43,399] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,399 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:43,399] {log.py:110} INFO - ()
+[2022-02-09 05:25:43,406] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,406 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:43,406] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:43,408] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,408 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,408] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,409] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,409 INFO sqlalchemy.engine.base.Engine (422, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0, '13:00 - 13:59', 'Thursday')
+[2022-02-09 05:25:43,409] {log.py:110} INFO - (422, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0, '13:00 - 13:59', 'Thursday')
+[2022-02-09 05:25:43,411] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,411 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:43,411] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:43,424] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,424 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:43,424] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:43,425] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,425 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:43,425] {log.py:110} INFO - ()
+[2022-02-09 05:25:43,429] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,429 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:43,429] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:43,431] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,431 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,431] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,432] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,432 INFO sqlalchemy.engine.base.Engine (422, 'gr-0001005437', 'atraore@eip.local', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0)
+[2022-02-09 05:25:43,432] {log.py:110} INFO - (422, 'gr-0001005437', 'atraore@eip.local', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0)
+[2022-02-09 05:25:43,434] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,434 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:43,434] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:43,447] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,447 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:43,447] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:43,448] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,447 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:43,447] {log.py:110} INFO - ()
+[2022-02-09 05:25:43,452] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,452 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:43,452] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:43,454] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,454 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,454] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:43,455] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,455 INFO sqlalchemy.engine.base.Engine (422, 'Outgoing', 'gr-0001005437', 'atraore@eip.local', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0)
+[2022-02-09 05:25:43,455] {log.py:110} INFO - (422, 'Outgoing', 'gr-0001005437', 'atraore@eip.local', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f2667bc3', '2019-06-20', '2019-06-20 13:15:17.000000', '2019-06-20 13:15:57.000000', 0.0)
+[2022-02-09 05:25:43,456] {logging_mixin.py:104} INFO - 2022-02-09 05:25:43,456 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:43,456] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:56,261] {logging_mixin.py:104} INFO - n= 9882
+[2022-02-09 05:25:56,651] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,651 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:56,651] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:25:56,652] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,652 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:56,652] {log.py:110} INFO - ()
+[2022-02-09 05:25:56,658] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,657 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:56,657] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:56,661] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,660 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,660] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,662] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,661 INFO sqlalchemy.engine.base.Engine (9882, 15127130160, 'Outgoing', 16, 'gr-0001011041', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0, '14:00 - 14:59', 'Monday')
+[2022-02-09 05:25:56,661] {log.py:110} INFO - (9882, 15127130160, 'Outgoing', 16, 'gr-0001011041', 'Primary Device,nan', None, 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0, '14:00 - 14:59', 'Monday')
+[2022-02-09 05:25:56,663] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,663 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:56,663] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:56,676] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,675 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:56,675] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:25:56,677] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,677 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:56,677] {log.py:110} INFO - ()
+[2022-02-09 05:25:56,681] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,681 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:56,681] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:56,684] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,684 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,684] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,685] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,685 INFO sqlalchemy.engine.base.Engine (9882, 'gr-0001011041', '5127176506@voip.evolveip.net', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0)
+[2022-02-09 05:25:56,685] {log.py:110} INFO - (9882, 'gr-0001011041', '5127176506@voip.evolveip.net', 'Primary Device,nan', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0)
+[2022-02-09 05:25:56,686] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,686 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:56,686] {log.py:110} INFO - COMMIT
+[2022-02-09 05:25:56,699] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,699 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:56,699] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:25:56,700] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,700 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:25:56,700] {log.py:110} INFO - ()
+[2022-02-09 05:25:56,705] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,705 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:25:56,705] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:25:56,707] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,707 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,707] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:25:56,708] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,708 INFO sqlalchemy.engine.base.Engine (9882, 'Outgoing', 'gr-0001011041', '5127176506@voip.evolveip.net', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0)
+[2022-02-09 05:25:56,708] {log.py:110} INFO - (9882, 'Outgoing', 'gr-0001011041', '5127176506@voip.evolveip.net', 'Primary Device', 'PolycomVVX-VVX_400-UA/5.4.7.1696_0004f25777ff', '2019-06-24', '2019-06-24 14:49:09.000000', '2019-06-24 15:20:24.000000', 31.0)
+[2022-02-09 05:25:56,711] {logging_mixin.py:104} INFO - 2022-02-09 05:25:56,711 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:25:56,711] {log.py:110} INFO - COMMIT
+[2022-02-09 05:26:09,555] {logging_mixin.py:104} INFO - n= 12718
+[2022-02-09 05:26:09,967] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,966 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:26:09,966] {log.py:110} INFO - PRAGMA main.table_info("call_dataset_mysql")
+[2022-02-09 05:26:09,967] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,967 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:26:09,967] {log.py:110} INFO - ()
+[2022-02-09 05:26:09,973] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,973 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:26:09,973] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:26:09,976] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,976 INFO sqlalchemy.engine.base.Engine INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:09,976] {log.py:110} INFO - INSERT INTO call_dataset_mysql ("index", "Group", "Call_Direction", "Missed_Calls", "GroupID", "Features", "vpDialingfacResult", "UsageDeviceType", "UserDeviceType", date, starttime, endtime, duration, hourly_range, weekly_range) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:09,977] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,977 INFO sqlalchemy.engine.base.Engine (12718, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Call Forward No Answer', None, None, None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0, '21:00 - 21:59', 'Monday')
+[2022-02-09 05:26:09,977] {log.py:110} INFO - (12718, 16109648000, 'Outgoing', 16, 'gr-0001005437', 'Call Forward No Answer', None, None, None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0, '21:00 - 21:59', 'Monday')
+[2022-02-09 05:26:09,978] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,978 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:26:09,978] {log.py:110} INFO - COMMIT
+[2022-02-09 05:26:09,991] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,991 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:26:09,991] {log.py:110} INFO - PRAGMA main.table_info("service_dataset_mysql")
+[2022-02-09 05:26:09,992] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,992 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:26:09,992] {log.py:110} INFO - ()
+[2022-02-09 05:26:09,996] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,995 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:26:09,995] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:26:09,998] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,997 INFO sqlalchemy.engine.base.Engine INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:09,997] {log.py:110} INFO - INSERT INTO service_dataset_mysql ("index", "GroupID", "UserID", "FeatureName", "UserDeviceType", "FeatureEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:09,999] {logging_mixin.py:104} INFO - 2022-02-09 05:26:09,998 INFO sqlalchemy.engine.base.Engine (12718, 'gr-0001005437', '6102321833@voip.evolveip.net', 'Call Forward No Answer', None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0)
+[2022-02-09 05:26:09,998] {log.py:110} INFO - (12718, 'gr-0001005437', '6102321833@voip.evolveip.net', 'Call Forward No Answer', None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0)
+[2022-02-09 05:26:10,001] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,001 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:26:10,001] {log.py:110} INFO - COMMIT
+[2022-02-09 05:26:10,018] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,018 INFO sqlalchemy.engine.base.Engine PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:26:10,018] {log.py:110} INFO - PRAGMA main.table_info("device_dataset_mysql")
+[2022-02-09 05:26:10,019] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,018 INFO sqlalchemy.engine.base.Engine ()
+[2022-02-09 05:26:10,018] {log.py:110} INFO - ()
+[2022-02-09 05:26:10,022] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,022 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+[2022-02-09 05:26:10,022] {log.py:110} INFO - BEGIN (implicit)
+[2022-02-09 05:26:10,024] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,024 INFO sqlalchemy.engine.base.Engine INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:10,024] {log.py:110} INFO - INSERT INTO device_dataset_mysql ("index", "DeviceEventTypeDirection", "GroupID", "UserID", "UsageDeviceType", "UserDeviceType", "DeviceEventDate", starttime, endtime, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2022-02-09 05:26:10,025] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,025 INFO sqlalchemy.engine.base.Engine (12718, 'Outgoing', 'gr-0001005437', '6102321833@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0)
+[2022-02-09 05:26:10,025] {log.py:110} INFO - (12718, 'Outgoing', 'gr-0001005437', '6102321833@voip.evolveip.net', None, None, '2019-06-24', '2019-06-24 21:24:29.000000', '2019-06-24 21:24:50.000000', 0.0)
+[2022-02-09 05:26:10,026] {logging_mixin.py:104} INFO - 2022-02-09 05:26:10,026 INFO sqlalchemy.engine.base.Engine COMMIT
+[2022-02-09 05:26:10,026] {log.py:110} INFO - COMMIT
+[2022-02-09 05:26:20,053] {python.py:118} INFO - Done. Returned value was: None
+[2022-02-09 05:26:20,070] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=generate_data, task_id=generate_data, execution_date=20220209T052405, start_date=20220209T052408, end_date=20220209T052620
+[2022-02-09 05:26:20,201] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-02-09 05:26:20,248] {local_task_job.py:146} INFO - Task exited with return code 0

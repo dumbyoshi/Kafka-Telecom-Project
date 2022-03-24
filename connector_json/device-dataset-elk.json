@@ -1,0 +1,19 @@
+
+{
+    "name": "device-dataset-elasticsearch-sink",
+    "config": {
+      "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+      "tasks.max": "1",
+      "topics": "device_dataset",
+      "key.ignore": "true",
+      "connection.url": "http://172.29.208.1:9200",
+      "connection.username": "elastic",
+      "connection.password": "changeme",
+      "type.name": "kafka-connect",
+      "name": "device-dataset-elasticsearch-sink"
+    },
+    "tasks": [],
+    "type": null
+  }
+  
+  
